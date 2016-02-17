@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="wheater_forecast" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Elw-GI-7tZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="w83-13-hY7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UwJ-3a-JJc">
+                                <rect key="frame" x="-4" y="0.0" width="604" height="736"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type a city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybx-qp-jEq">
+                                <rect key="frame" x="259" y="89" width="83" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="exI-od-N2N"/>
+                                    <constraint firstAttribute="height" constant="21" id="lid-zg-POw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="120" verticalHuggingPriority="251" horizontalCompressionResistancePriority="350" misplaced="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hc-ut-dIn">
+                                <rect key="frame" x="132" y="20" width="337" height="50"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="How's the wheather?">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="32" name="Avenir-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="350" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="^" borderStyle="roundedRect" placeholder="Ex: London" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnh-gx-mAo">
+                                <rect key="frame" x="157" y="154" width="243" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="452" id="VHA-al-1t4"/>
+                                    <constraint firstAttribute="width" constant="200" id="W5h-no-vzx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="t9J-Go-L8g"/>
+                                    <constraint firstAttribute="height" constant="30" id="yxJ-nx-val"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="VHA-al-1t4"/>
+                                        <exclude reference="t9J-Go-L8g"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R13-HE-od8">
+                                <rect key="frame" x="248" y="254" width="103" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.13032889949659765" blue="0.77293650059685581" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="P8P-rb-soP"/>
+                                    <constraint firstAttribute="height" constant="30" id="Rgm-b6-svV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Qual o clima?">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.7523122351" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="findWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jSo-qk-SPc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Y35-7C-cGa">
+                                <rect key="frame" x="132" y="292" width="332" height="308"/>
+                                <color key="backgroundColor" red="0.95193458712738266" green="1" blue="0.99287675782502927" alpha="0.53841594827586203" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="161" id="Qrt-2h-9Sg"/>
+                                    <constraint firstAttribute="width" constant="455" id="cof-Lj-W2k"/>
+                                    <constraint firstAttribute="width" constant="235" id="jhi-xL-73h"/>
+                                    <constraint firstAttribute="height" constant="161" id="liQ-es-kxD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Qrt-2h-9Sg"/>
+                                        <exclude reference="cof-Lj-W2k"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UwJ-3a-JJc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="0WG-6b-Aek"/>
+                            <constraint firstItem="UwJ-3a-JJc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-24" id="7O2-7r-PeU"/>
+                            <constraint firstItem="9hc-ut-dIn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8e7-L8-YfE"/>
+                            <constraint firstItem="jnh-gx-mAo" firstAttribute="centerX" secondItem="Ybx-qp-jEq" secondAttribute="centerX" id="EJE-fq-j8R"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="UwJ-3a-JJc" secondAttribute="bottom" constant="-136" id="HFb-Yb-fRh"/>
+                            <constraint firstItem="Y35-7C-cGa" firstAttribute="top" secondItem="R13-HE-od8" secondAttribute="bottom" constant="37" id="Mvk-5m-tIN"/>
+                            <constraint firstItem="R13-HE-od8" firstAttribute="top" secondItem="jnh-gx-mAo" secondAttribute="bottom" constant="70" id="R84-NP-d06"/>
+                            <constraint firstItem="Ybx-qp-jEq" firstAttribute="top" secondItem="9hc-ut-dIn" secondAttribute="bottom" constant="20" id="W3H-vn-bdM"/>
+                            <constraint firstItem="Ybx-qp-jEq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WiO-qI-9DK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UwJ-3a-JJc" secondAttribute="trailing" constant="-20" id="Z3x-wk-zxa"/>
+                            <constraint firstItem="w83-13-hY7" firstAttribute="top" secondItem="Y35-7C-cGa" secondAttribute="bottom" constant="118" id="bZf-Ln-V4N"/>
+                            <constraint firstItem="9hc-ut-dIn" firstAttribute="top" secondItem="Elw-GI-7tZ" secondAttribute="bottom" id="clR-eN-By4"/>
+                            <constraint firstItem="jnh-gx-mAo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h8r-vd-xfG"/>
+                            <constraint firstItem="R13-HE-od8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m1v-l9-Txb"/>
+                            <constraint firstItem="Y35-7C-cGa" firstAttribute="centerX" secondItem="UwJ-3a-JJc" secondAttribute="centerX" id="rHj-Ai-koS"/>
+                            <constraint firstItem="jnh-gx-mAo" firstAttribute="top" secondItem="Ybx-qp-jEq" secondAttribute="bottom" constant="44" id="y8L-ft-D6H"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="h8r-vd-xfG"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="jnh-gx-mAo" id="tbL-n2-n1G"/>
+                        <outlet property="resultLabel" destination="Y35-7C-cGa" id="CHP-QG-1ga"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173" y="464"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.jpg" width="1920" height="1440"/>
+    </resources>
+</document>
