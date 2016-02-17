@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  wheater-forecast
+//  weather-forecast
 //
 //  Created by Fraschetti on 2/12/16.
 //  Copyright © 2016 Fraschetti. All rights reserved.
